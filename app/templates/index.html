@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>My home page</title>
+</head>
+<body>
+
+<h1>
+    Hello, {{ title }} {{ name }}
+</h1>
+
+<h2>Wednesday, January 11th, 2023</h2>
+<p>it will print with_logging because that's the name of your new function. In fact, if you look at the docstring for f,
+    it will be blank because with_logging has no docstring, and so the docstring you wrote won't be there anymore. Also,
+    if you look at the pydoc result for that function, it won't be listed as taking one argument x; instead it'll be
+    listed as taking *args and **kwargs because that's what with_logging takes.</p>
+
+<ul>
+    {% for tweet in tweets %}
+        <li>
+            <strong>{{ tweet.user }}</strong> at {{ tweet.date }}
+            <p style="font-style: italic">{{ tweet.text }}</p>
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+
+</html>
